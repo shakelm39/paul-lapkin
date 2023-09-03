@@ -4,11 +4,24 @@
     <!-- REQUIRED META TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portfolio website">
+    <meta name="robots" content="index, follow">
     <!-- FIVICON ICON -->
     <link rel="shortcut icon" href="resources/assets/logo.png" type="image/x-icon">
     <!-- TITLE  -->
     <title>Paul Lapkin</title>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto&family=Titillium+Web:wght@200;600;700&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css">
+    <!-- wow css  -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- CSS FILES  -->
+    <link rel="stylesheet" href="resources/css/animate.css">
+    <link rel="stylesheet" href="vendors/css/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/query.css">
 
@@ -16,7 +29,7 @@
 <body>
     <!-- START HEADER SECTION  -->
     <header id="hero">
-        <nav>
+        <nav class="clearfix" data-uk-sticky="offset: 80">
             <div class="container">
                 <div class="logo">
                 <a href="">
@@ -24,27 +37,265 @@
                 </a>
                 </div>
                 <div class="menu">
-                    <a href=""><ion-icon name="menu-outline"></ion-icon></a>
+                    <a href="javascript:void(0)" onclick="menuOpen();"><ion-icon name="menu-outline"></ion-icon></a>
                 </div>
             </div>
         </nav>
+        <div id="menu-container">
+            <div class="close-btn">
+                <a href="javascript:void(0)" onclick="menuClose();"><ion-icon name="close-circle-outline"></ion-icon></a>
+            </div>
+            <ul class="ham-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#exp">Experience</a></li>
+                <li><a href="#work">Portfolio</a></li>
+                <li><a href="#tm">Testimonial</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Paul Lapkin</h1>
-                <span>#User Experience #Music #Creative Direction</span>
+                <div class="hero-content-box" data-uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
+                    <h1>Paul Lapkin</h1>
+                    <br>
+                    <span>#User Experience #Music #Creative Direction</span>            
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="next-section">
-                <a href="#"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                <a href="#about"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
             </div>
         </div>
     </header>
     <!-- END HEADER SECTION  -->
-
+    <!-- START ABOUT SECTION  -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-grid-item" data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                    <img src="resources/assets/paul.png" alt="">
+                </div>
+                <div class="about-grid-item " data-uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                    <h4>Hi, i'm Paul Lapkin, Experience crafter from Canada</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquipex ea commodo consequat.</p>
+                    <p>Duis autem vel eum iriure dolorin hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.</p>
+                    <div class="about-cta-btn">
+                        <a href="" class="btn btn-full uk-animation-shake">Hire Me!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT SECTION  -->
+    <!-- START WORKING SECTION  -->
+    <div id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Working Process</h2>
+                <p>Hi, I'm Paul Lapkin, Experience crafter from Canada.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-grid-item" data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                    <img src="resources/assets/monitor.png" alt="monitor">
+                    <h4>Design</h4>
+                </div>
+                <div class="process-grid-item" data-uk-scrollspy="cls: uk-animation-slide-top; repeat: true">
+                    <img src="resources/assets/development.png" alt="monitor">
+                    <h4>Development</h4>
+                    
+                </div>
+                <div class="process-grid-item" data-uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true">
+                    <img src="resources/assets/testing.png" alt="monitor">
+                    <h4>Testing</h4>
+                </div>
+                <div class="process-grid-item" data-uk-scrollspy="cls: uk-animation-slide-right; repeat:true">
+                    <img src="resources/assets/rocket.png" alt="monitor">
+                    <h4>Launch</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- START EXPERIENCE SECTION  -->
+    <div id="exp">
+       <div class="container">
+        <div class="exp-grid">
+            <div class="exp-grid-item" data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                <h3>Work Experience</h3>
+                <div class="job">
+                    <h4>Mad Max Design</h4>
+                    <span>OCT 2013 - june 2014</span>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+                <hr>
+                <div class="job">
+                    <h4>Mad Max Design</h4>
+                    <span>OCT 2013 - june 2014</span>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+            <div class="exp-grid-item" data-uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                <h3>Work Experience</h3>
+                <div class="job">
+                    <h4>Mad Max Design</h4>
+                    <span>OCT 2013 - june 2014</span>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+                <hr>
+                <div class="job">
+                    <h4>Mad Max Design</h4>
+                    <span>OCT 2013 - june 2014</span>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+        </div>
+       </div> 
+    </div>
+    <!-- END EXPERIENCE SECTION  -->
+    <!-- START WORK SECTION  -->
+    <section id="work">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Latest Works</h2>
+                <p>Hi, I'm Paul Lapkin, Experience crafter from Canada.</p>
+            </div>
+            <div class="work-filter">
+                <button type="button" data-filter="all">All</button>
+                <button type="button" data-filter=".webdesign">Web Design</button>
+                <button type="button" data-filter=".webdevelopment">Web Development</button>
+                <button type="button" data-filter=".wp">Wordpress</button>
+            </div>
+            <div class="work-grid" data-uk-lightbox="animation: scale">
+                <div class="work-grid-item mix webdesign">
+                    <a href="resources/assets/01.jpg">
+                        <img src="resources/assets/01.jpg" alt="Work">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webdevelopment">
+                    <a href="resources/assets/02.jpg">
+                        <img src="resources/assets/02.jpg" alt="Work">
+                    </a>
+                </div>
+                <div class="work-grid-item mix wp">
+                    <a href="resources/assets/03.jpg">
+                        <img src="resources/assets/03.jpg" alt="Work">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webdevelopment">
+                    <a href="resources/assets/04.jpg">
+                        <img src="resources/assets/04.jpg" alt="Work">
+                    </a>
+                </div>
+                <div class="work-grid-item mix wp">
+                    <a href="resources/assets/07.jpg">
+                        <img src="resources/assets/07.jpg" alt="Work">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webdevelopment">
+                    <a href="resources/assets/06.jpg">
+                        <img src="resources/assets/06.jpg" alt="Work">
+                    </a>
+                </div>
+                <div class="work-grid-item mix webdesign">
+                    <a href="resources/assets/08.jpg">
+                        <img src="resources/assets/08.jpg" alt="Work">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END WORK SECTION  -->
+    <!-- START TESTIMONIAL SECTION  -->
+    <section id="tm">
+        <div class="container">
+            <div class="tm-grid">
+                <div class="tm-grid-item-img">
+                    <img src="resources/css/img/testimonial.jpg" alt="">
+                </div>
+                <div class="tm-grid-item" data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                    <img src="resources/assets/quto.png" class="quto" alt="Quto">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquipex ea commodo consequat.</p>
+                    <img src="resources/assets/sign.png" class="signature" alt="Deniel Croft">
+                    <h4>Deniel Croft</h4>
+                    <span>Creative Designer, Levy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END TESTIMONIAL SECTION  -->
+    <!-- START CONTACT SECTION  -->
+    <section id="contact">
+        <div class="container">
+            <div class="ct-grid">
+                <div class="ct-grid-item" data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                    <h3>Leave a message</h3>
+                    <form action="#">
+                        <input type="text" placeholder="Name*" required>
+                        <input type="email" placeholder="Email*" required>
+                        <input type="text" placeholder="Subject*" required>
+                        <textarea placeholder="Message*" required></textarea>
+                        <div class="submit-btn">
+                            <input class="btn btn-full wow animate__shakeX"  type="submit" value="Hire me!">
+                        </div>
+                    </form>
+                </div>
+                <div class="ct-grid-item nested-ct-grid" data-uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                    <div class="nested-ct-grid-item">
+                        <h3>Address</h3>
+                        <p>Gulshan Sales Office. SA Tower (Level-5), Plot#1, Road#134, Block SE(A), Gulshan-1, Dhaka 1212.</p>
+                    </div>
+                    <div class="nested-ct-grid-item">
+                        <h3>Phone</h3>
+                        <p>+880 174 037 6995</p>
+                        <p>+880 191 448 6969</p>
+                    </div>
+                    <div class="nested-ct-grid-item">
+                        <h3>Web</h3>
+                        <p>Mail: quicksayed@gmail.com <br>Website: dribbble.com/alisayed</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTACT SECTION  -->
+    <!-- START FOOTER SECTION  -->
+    <footer id="footer">
+        <div class="container">
+            <ul class="social-list">
+                <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-google"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+            <div class="copyright">
+                Copyright &copy; <span>Shakel</span> | All rights reserved.
+            </div>
+            <div class="totop">
+                <a href="#" data-uk-totop data-uk-scroll></a>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION  -->
 
     <!-- JS FILES  -->
+    <!-- jquery cdn  -->
+    <script src="vendors/js/particles.min.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
+    <!-- particle js -->
+    <script src="vendors/js/particles.min.js"></script>
+    <script src="vendors/js/app.js"></script>
+    <!-- mixitup -->
+    <script src="vendors/js/mixitup.min.js"></script>
+    <!-- wow js  -->
+    <script src="resources/js/wow.min.js"></script>
+    <script src="resources/js/main.js"></script>
 </body>
 </html>
